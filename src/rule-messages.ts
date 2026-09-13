@@ -35,6 +35,10 @@ const defaultRuleMessages: Record<string, string> = {
     'Replace == with === and != with !==. If comparing against null to catch both null and undefined, check whether the project config allows `== null` before changing it.',
   'guard-for-in':
     'Add a hasOwn check inside the for-in loop: `if (Object.hasOwn(obj, key))`, or replace the for-in loop with Object.keys(obj).forEach() or Object.entries().',
+  'max-lines':
+    'This file exceeds the maximum line count. Split it into smaller modules — extract cohesive functionality into separate files and import it back. Do not strip comments, merge statements onto fewer lines, or add an eslint-disable comment to evade the limit.',
+  'max-lines-per-function':
+    'This function exceeds the maximum line count. Extract logical steps into well-named helper functions in the same module. Do not merge statements onto fewer lines or remove blank lines/comments to get under the limit — reduce the actual amount of logic in the function.',
   'no-alert':
     'Remove the alert/confirm/prompt call. These are browser-native dialogs not suitable for production.',
   'no-caller':
@@ -139,10 +143,6 @@ const defaultRuleMessages: Record<string, string> = {
     'Rename the identifier to camelCase: e.g., my_var becomes myVar. For destructured properties from external APIs, rename inline: `const { snake_case: camelCase } = obj`.',
   'func-names':
     'Add a name to the function expression: `const x = function myFunc() {}`. Do not convert to an arrow function — that changes `this` binding.',
-  'max-lines':
-    'This file exceeds the maximum line count. Split it into smaller modules — extract cohesive functionality into separate files and import it back. Do not strip comments, merge statements onto fewer lines, or add an eslint-disable comment to evade the limit.',
-  'max-lines-per-function':
-    'This function exceeds the maximum line count. Extract logical steps into well-named helper functions in the same module. Do not merge statements onto fewer lines or remove blank lines/comments to get under the limit — reduce the actual amount of logic in the function.',
   'new-cap':
     'Constructors must be capitalized: `new Person()`, not `new person()`. Non-constructor functions must be lowercase. If this is not a constructor, remove `new`.',
   'no-array-constructor':
